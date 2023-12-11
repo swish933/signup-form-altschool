@@ -163,7 +163,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 	color: rgba(0, 0, 0, 0);
 	opacity: 1;
 	display: block;
-	background: url("/assets/u_a_calendar-alt.svg") no-repeat;
+	background: url("./assets/u_a_calendar-alt.svg") no-repeat;
 	width: 1.5rem;
 	height: 1.5rem;
 	border-width: thin;
@@ -212,11 +212,11 @@ label[for="password"]::after {
 	aspect-ratio: 1;
 	top: 60%;
 	right: 1rem;
-	background: url("/assets/show.svg");
+	background: url("./assets/show.svg");
 }
 
 select {
-	background: url("/assets/u_angle-down.svg") no-repeat right;
+	background: url("./assets/u_angle-down.svg") no-repeat right;
 	appearance: none;
 	color: hsl(0, 0%, 0%);
 }
