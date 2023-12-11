@@ -1,0 +1,297 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+
+html,
+body {
+	min-height: 100vh;
+	min-height: 100svh;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	background: hsl(170, 60%, 98%);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	padding-inline: 1.5rem;
+	min-height: 100vh;
+	margin: 0 auto;
+	max-width: 650px;
+	gap: 2.5rem;
+
+	padding-block: 5rem;
+}
+
+main > * {
+	flex: 1;
+}
+
+section:first-of-type p {
+	max-width: 28.75rem;
+	font-size: 1rem;
+	line-height: 1.5625rem;
+	font-weight: normal;
+	color: #737373;
+}
+
+section {
+	font-family: "Work Sans", sans-serif;
+}
+
+label[for="first-name"] {
+	grid-area: fname;
+}
+label[for="last-name"] {
+	grid-area: lname;
+}
+label[for="gender"] {
+	grid-area: gender;
+}
+
+label[for="dob"] {
+	grid-area: dob;
+}
+
+label[for="weight"] {
+	grid-area: weight;
+}
+
+label[for="height"] {
+	grid-area: height;
+}
+
+label[for="activity"] {
+	grid-area: activity;
+}
+
+label[for="password"] {
+	grid-area: password;
+}
+
+#submit {
+	grid-area: submit;
+}
+
+form {
+	padding-inline: 1rem;
+	padding-block: 1.5rem;
+	border-radius: 6px;
+	font-size: 0.875rem;
+	background: #ffffff;
+	box-shadow: 0px 4px 50px 0px hsla(222, 54%, 46%, 0.1);
+	display: grid;
+	gap: 1.5rem;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+		"fname fname"
+		"lname lname"
+		"gender gender"
+		"dob dob"
+		"weight weight"
+		"height height"
+		"activity activity"
+		"password password"
+		"submit submit";
+}
+
+label {
+	text-transform: capitalize;
+	display: flex;
+	flex-direction: column;
+	gap: 0.63rem;
+	/* font-family: Sofia Pro; */
+	font-weight: 600;
+	color: #011c34;
+	line-height: normal;
+	letter-spacing: 0.00625rem;
+}
+
+input,
+select {
+	border: 1px solid hsla(0, 0%, 94%, 1);
+	height: 3rem;
+	border-radius: 0.125rem;
+	font-weight: initial;
+	padding-inline-start: 1rem;
+	padding-inline-end: 0.5rem;
+	line-height: 1.25rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+button[type="submit"]:focus-visible {
+	outline: 1px solid hsla(174, 62%, 47%, 1);
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+	color: rgba(0, 0, 0, 0);
+	opacity: 1;
+	display: block;
+	background: url("/assets/u_a_calendar-alt.svg") no-repeat;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-width: thin;
+}
+
+h1 {
+	margin-block-start: 2.5rem;
+	margin-block-end: 0.75rem;
+	font-size: 1.875rem;
+	line-height: 3.125rem;
+	font-weight: bold;
+}
+
+img {
+	width: 2.5rem;
+	margin-inline-start: -0.5rem;
+}
+
+.img-container {
+	width: 2.5rem;
+}
+
+button[type="submit"] {
+	font-size: 1rem;
+	border-radius: 0.125rem;
+	color: hsl(0, 0%, 100%);
+	background: hsl(174, 62%, 47%);
+	padding-block: 1rem;
+	font-weight: 600;
+	border: none;
+	cursor: pointer;
+}
+
+.placeholder {
+	color: hsl(0, 0%, 45%);
+}
+
+label[for="password"] {
+	position: relative;
+}
+
+label[for="password"]::after {
+	content: "";
+	position: absolute;
+	width: 1rem;
+	aspect-ratio: 1;
+	top: 60%;
+	right: 1rem;
+	background: url("/assets/show.svg");
+}
+
+select {
+	background: url("/assets/u_angle-down.svg") no-repeat right;
+	appearance: none;
+	color: hsl(0, 0%, 0%);
+}
+
+option:first-of-type {
+	color: hsl(0, 0%, 45%) !important;
+}
+
+.underlined-link {
+	color: hsla(174, 62%, 47%, 1);
+	text-decoration: underline;
+}
+
+.terms_desktop,
+.terms_mobile {
+	font-size: 0.875rem;
+	line-height: 1.5625rem;
+}
+
+.terms_mobile {
+	text-align: center;
+	margin-block-start: 1.5rem;
+}
+
+.terms_desktop {
+	display: none;
+	text-align: center;
+}
+
+select:required:invalid {
+	color: #737373;
+}
+
+@media (min-width: 768px) {
+	main {
+		max-width: 1200px;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		/* gap: 7.5rem; */
+	}
+
+	img {
+		width: 5rem;
+		margin-inline-start: -0.85rem;
+	}
+
+	.img-container {
+		width: 5rem;
+	}
+
+	.terms_desktop {
+		display: block;
+		grid-area: terms;
+	}
+
+	.terms_mobile {
+		display: none;
+	}
+
+	h1 {
+		margin-block-start: 3.12rem;
+		margin-block-end: 1.25rem;
+		font-size: 2.5rem;
+	}
+
+	form {
+		padding: 2.5rem;
+		grid-template-areas:
+			"fname lname"
+			"gender dob"
+			"weight height"
+			"activity activity"
+			"password password"
+			"submit submit"
+			"terms terms";
+	}
+}

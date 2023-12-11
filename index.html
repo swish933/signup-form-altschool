@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Signup Form</title>
+		<link rel="stylesheet" href="/index.css" />
+	</head>
+	<body>
+		<main id="main">
+			<section>
+				<div class="img-container">
+					<img src="/assets/logo.svg" alt="logo" id="logo" />
+				</div>
+				<h1>For Individuals</h1>
+				<p>
+					Start benefiting from the wellness experience. For companies looking
+					on increasing productivity, and improving organization wellness.
+				</p>
+			</section>
+
+			<section>
+				<form>
+					<label for="first-name">
+						first name <input type="text" name="first-name" id="first-name" />
+					</label>
+					<label for="last-name">
+						last name <input type="text" name="last-name" id="last-name" />
+					</label>
+					<label for="gender">
+						gender
+						<select name="gender" id="gender" required>
+							<option value="" disabled selected hidden>Select here</option>
+							<option value="male">Male</option>
+							<option value="female">Female</option>
+						</select>
+					</label>
+					<label for="dob">
+						Date of Birth
+						<input type="date" name="dob" id="dob" placeholder="Select here" />
+					</label>
+					<label for="weight"
+						>Weight (KG)
+						<input
+							type="number"
+							name="weight"
+							id="weight"
+							placeholder="Enter Weight"
+						/>
+					</label>
+					<label for="height"
+						>Height (CM)
+						<input
+							type="number"
+							name="height"
+							id="height"
+							placeholder="Enter height here.. "
+						/>
+					</label>
+					<label for="activity">
+						Activity level
+						<select name="activity" id="activity" required>
+							<option value="" disabled selected hidden>Select here</option>
+							<option value="slightly active">Slightly active</option>
+							<option value="moderately active">Moderately active</option>
+							<option value="active">Active lifestyle</option>
+							<option value="very active">Very active lifestyle</option>
+						</select>
+					</label>
+					<label for="password">
+						password
+						<input type="password" name="password" id="password" />
+					</label>
+
+					<button id="submit" type="submit">Register</button>
+					<p class="terms_desktop">
+						By clicking Register, you agree to our
+						<span class="underlined-link">Terms of Use</span> and our
+						<span class="underlined-link">Privacy Policy</span>
+					</p>
+				</form>
+
+				<p class="terms_mobile">
+					By clicking Register, you agree to our
+					<span class="underlined-link">Terms of Use</span> and our
+					<span class="underlined-link">Privacy Policy</span>
+				</p>
+			</section>
+		</main>
+	</body>
+</html>
