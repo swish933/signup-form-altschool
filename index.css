@@ -242,8 +242,12 @@ option:first-of-type {
 }
 
 .terms_desktop {
-	display: none;
 	text-align: center;
+}
+
+.desktop,
+.terms_desktop {
+	display: none;
 }
 
 select:required:invalid {
@@ -269,11 +273,16 @@ select:required:invalid {
 	}
 
 	.terms_desktop {
-		display: block;
 		grid-area: terms;
 	}
 
-	.terms_mobile {
+	.desktop,
+	.terms_desktop {
+		display: block;
+	}
+
+	.terms_mobile,
+	.mobile {
 		display: none;
 	}
 
